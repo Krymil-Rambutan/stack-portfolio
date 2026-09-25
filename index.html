@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krymil | Luau System Architecture & Tech Stack</title>
+  <title>Krymil | Luau Systems & Architecture Stack</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-950 text-gray-100 font-sans min-h-screen border-t-4 border-indigo-500">
@@ -11,189 +11,190 @@
   <!-- Navigation -->
   <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-gray-800/80">
     <div class="flex items-center gap-3">
-      <div class="bg-indigo-600 text-white font-mono font-bold text-xs px-2.5 py-1 rounded">STACK v1.0</div>
-      <span class="font-bold text-lg tracking-tight text-white">Krymil Architecture</span>
+      <div class="bg-indigo-600 text-white font-mono font-bold text-xs px-2.5 py-1 rounded">CORE v1.0.0</div>
+      <span class="font-bold text-lg tracking-tight text-white">Krymil Systems</span>
     </div>
-    <div class="flex gap-4 text-sm font-medium">
-      <a href="#stack" class="text-gray-400 hover:text-white transition">Tech Stack</a>
-      <a href="#architecture" class="text-gray-400 hover:text-white transition">Engine Modules</a>
-      <a href="#pipeline" class="text-gray-400 hover:text-white transition">Delivery Pipeline</a>
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="#systems" class="text-gray-400 hover:text-white transition">Systems & Versions</a>
+      <a href="#tech" class="text-gray-400 hover:text-white transition">Technical Stack</a>
     </div>
   </nav>
 
   <!-- Hero Header -->
   <header class="max-w-6xl mx-auto px-6 pt-16 pb-12">
-    <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full">Roblox Backend Engineering</span>
+    <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full">Roblox Luau Development</span>
     <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mt-4 mb-4">
-      Commercial Luau Architecture & Tech Stack
+      Commercial Luau Backend Systems
     </h1>
     <p class="text-gray-400 text-lg max-w-3xl leading-relaxed">
-      A comprehensive breakdown of the core systems, type-safe modules, and automated deployment pipelines engineered for high-performance Roblox game production.
+      Modular, production-ready Roblox backend engines with full version tracking, strict type checking, and standardized API integration.
     </p>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 space-y-16 pb-20">
 
-    <!-- Section 1: Technology Stack Grid -->
-    <section id="stack" class="space-y-6">
+    <!-- Section 1: Systems & Version Logs -->
+    <section id="systems" class="space-y-8">
       <h2 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-3">
-        Core Technology Stack
+        Programs & Version History
+      </h2>
+
+      <div class="grid grid-cols-1 gap-8">
+
+        <!-- Program 1: Persistent DataStore System -->
+        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 md:p-8 space-y-4">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-gray-800 pb-4">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Data & Persistence</span>
+              <h3 class="text-2xl font-bold text-white">Persistent Player Data System</h3>
+            </div>
+            <span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm px-3 py-1 rounded-full border border-indigo-500/30">v1.0.0 Stable</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            A light, fault-tolerant player data persistence system for Roblox Luau that manages currency and progression stats with automatic retry protection and graceful shutdown handling.
+          </p>
+
+          <div class="bg-gray-950/80 border border-gray-800/80 rounded-lg p-4 space-y-2">
+            <h4 class="text-xs font-mono text-indigo-400 uppercase font-semibold">What's New in Version 1.0.0</h4>
+            <ul class="text-xs text-gray-300 space-y-1.5 pl-4 list-disc">
+              <li><strong>Protected Async Calls:</strong> Wrapped <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">GetAsync</code> and <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">SetAsync</code> inside pcall buffers to shield against Roblox API throttles and downtime.</li>
+              <li><strong>Background Auto-Save Engine:</strong> Implemented <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">task.spawn</code> loop running on a configurable 60-second interval.</li>
+              <li><strong>Default Data Reconciliation:</strong> Automatic table cloning fallback for new player session initialization.</li>
+              <li><strong>Server Shutdown Hooks:</strong> Bound save logic to <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">game:BindToClose</code> to guarantee data persistence during server updates.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Program 2: Dynamic Shop System -->
+        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 md:p-8 space-y-4">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-gray-800 pb-4">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Economy & Commerce</span>
+              <h3 class="text-2xl font-bold text-white">Dynamic Shop & Transaction Engine</h3>
+            </div>
+            <span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm px-3 py-1 rounded-full border border-indigo-500/30">v1.0.0 Stable</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            A modular OOP-based merchant and shop system featuring dynamic pricing markups, stock inventory tracking, and complete fund/stock transaction validation.
+          </p>
+
+          <div class="bg-gray-950/80 border border-gray-800/80 rounded-lg p-4 space-y-2">
+            <h4 class="text-xs font-mono text-indigo-400 uppercase font-semibold">What's New in Version 1.0.0</h4>
+            <ul class="text-xs text-gray-300 space-y-1.5 pl-4 list-disc">
+              <li><strong>OOP Shop Constructor:</strong> Implemented <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">Shop.new()</code> using metatables for scalable merchant creation.</li>
+              <li><strong>Restock Pipeline:</strong> Created <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">Restock()</code> method for initializing and dynamically updating store inventories and item prices.</li>
+              <li><strong>Atomic Purchase Processor:</strong> Engineered <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">ProcessPurchase()</code> handling 5-step transaction validation (item check, stock check, dynamic price calculation, fund check, inventory push).</li>
+              <li><strong>Dynamic Markup Engine:</strong> Math-floor price calculation supporting arbitrary scalar multipliers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Program 3: Tactical Combat System -->
+        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 md:p-8 space-y-4">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-gray-800 pb-4">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Gameplay Mechanics</span>
+              <h3 class="text-2xl font-bold text-white">Tactical Combat & Posture Engine</h3>
+            </div>
+            <span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm px-3 py-1 rounded-full border border-indigo-500/30">v1.0.0 Stable</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            A structured combat architecture featuring stamina management, distance-based range checking, guard mechanics, posture breaks, and turn recovery cycles.
+          </p>
+
+          <div class="bg-gray-950/80 border border-gray-800/80 rounded-lg p-4 space-y-2">
+            <h4 class="text-xs font-mono text-indigo-400 uppercase font-semibold">What's New in Version 1.0.0</h4>
+            <ul class="text-xs text-gray-300 space-y-1.5 pl-4 list-disc">
+              <li><strong>Entity Constructor Engine:</strong> Implemented <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">Entity.new()</code> class with full HP, stamina, speed, reach, posture, and positional tracking.</li>
+              <li><strong>Combat Manager Core:</strong> Engineered <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">ExecuteMove()</code> handling stamina validation, range checking, damage pipeline, and posture breaks.</li>
+              <li><strong>Mitigated Damage Pipeline:</strong> Created <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">TakeDamage()</code> supporting percentage-based blocking mitigation and posture reduction.</li>
+              <li><strong>Turn Recovery Hooks:</strong> Integrated speed-scaled stamina regeneration logic for turn-based or tick-based combat loops.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Program 4: Dynamic Interactable GUI -->
+        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 md:p-8 space-y-4">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-gray-800 pb-4">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">User Interface</span>
+              <h3 class="text-2xl font-bold text-white">Dynamic Interactable GUI Framework</h3>
+            </div>
+            <span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm px-3 py-1 rounded-full border border-indigo-500/30">v1.0.0 Stable</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            A client-side UI system for Roblox Luau that dynamically instantiates shop listings, handles custom styling, and processes real-time hover animations and click events.
+          </p>
+
+          <div class="bg-gray-950/80 border border-gray-800/80 rounded-lg p-4 space-y-2">
+            <h4 class="text-xs font-mono text-indigo-400 uppercase font-semibold">What's New in Version 1.0.0</h4>
+            <ul class="text-xs text-gray-300 space-y-1.5 pl-4 list-disc">
+              <li><strong>Dynamic Item Populator:</strong> Engineered <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">populateShop()</code> to wipe stale button elements and render structured inventory arrays cleanly.</li>
+              <li><strong>Runtime Styling Pipeline:</strong> Automated application of UICorner rounding, dynamic UDim2 positional offsets, and color palette assignment.</li>
+              <li><strong>Interactive Event Handlers:</strong> Bound MouseEnter and MouseLeave listeners to drive responsive UI hover animations.</li>
+              <li><strong>Action Hook Listener:</strong> Implemented MouseButton1Click handling prepared for client-to-server purchase requests.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Program 5: Placement Grid Engine -->
+        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6 md:p-8 space-y-4">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-gray-800 pb-4">
+            <div>
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Spatial Math & Mechanics</span>
+              <h3 class="text-2xl font-bold text-white">Type-Safe Placement Grid Engine</h3>
+            </div>
+            <span class="bg-indigo-500/20 text-indigo-300 font-mono text-sm px-3 py-1 rounded-full border border-indigo-500/30">v1.0.0 Stable</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">
+            A high-performance Luau grid placement system featuring strict type checking (<code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">--!strict</code>), dynamic spatial grid alignment, and 3D bounding box validation.
+          </p>
+
+          <div class="bg-gray-950/80 border border-gray-800/80 rounded-lg p-4 space-y-2">
+            <h4 class="text-xs font-mono text-indigo-400 uppercase font-semibold">What's New in Version 1.0.0</h4>
+            <ul class="text-xs text-gray-300 space-y-1.5 pl-4 list-disc">
+              <li><strong>Strict Type Definition:</strong> Exported <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">GridConfig</code> type interface requiring GridSize and MaxBounds Vector3 properties.</li>
+              <li><strong>OOP Placement Constructor:</strong> Implemented <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">PlacementGridEngine.new()</code> with automatic default fallback values.</li>
+              <li><strong>Grid Alignment Processor:</strong> Engineered <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">SnapToGrid()</code> utilizing math-floor offset vector calculations for X/Z planar snapping while maintaining Y elevation.</li>
+              <li><strong>Spatial Bounds Checker:</strong> Implemented <code class="bg-gray-800 px-1 py-0.5 rounded text-indigo-300">IsWithinBounds()</code> enforcing strict plot perimeter constraints across X and Z axes.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Technical Specifications Overview -->
+    <section id="tech" class="space-y-6">
+      <h2 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-3">
+        Architecture Standards
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Language & Language Server -->
-        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="font-bold text-lg text-white">Language & Logic</h3>
-            <span class="text-xs font-mono bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded">Engine</span>
-          </div>
-          <ul class="text-sm text-gray-300 space-y-2.5">
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Luau (<code class="bg-gray-800 px-1.5 py-0.5 rounded text-xs text-indigo-300">--!strict</code> Type Enforcement)</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Object-Oriented Metatable Design</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Vector & Spatial Math Engines</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Thread Task Scheduling (<code class="bg-gray-800 px-1.5 py-0.5 rounded text-xs text-indigo-300">task.spawn</code>)</li>
-          </ul>
+        <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-5">
+          <h3 class="font-bold text-white text-base mb-2">Strict Type Safety</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            All core engineering utilizes Luau strict mode (<code class="text-indigo-300 bg-gray-800 px-1 py-0.5 rounded">--!strict</code>) and explicit type declarations to eliminate runtime errors before deployment.
+          </p>
         </div>
 
-        <!-- Infrastructure & Persistence -->
-        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="font-bold text-lg text-white">Data & Network</h3>
-            <span class="text-xs font-mono bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded">Services</span>
-          </div>
-          <ul class="text-sm text-gray-300 space-y-2.5">
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> DataStoreService with <code class="bg-gray-800 px-1.5 py-0.5 rounded text-xs text-indigo-300">pcall</code> retry buffers</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> BindToClose Server Shutdown Hooks</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Client-Server Remote Event Pipelines</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Memory Leak Prevention & Cleanup</li>
-          </ul>
+        <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-5">
+          <h3 class="font-bold text-white text-base mb-2">Metatable OOP Design</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Modular, object-oriented design patterns allow game studios to quickly instantiate multiple merchants, combat entities, or placement grids without code duplication.
+          </p>
         </div>
 
-        <!-- Automation & Tooling -->
-        <div class="bg-gray-900/60 border border-gray-800 rounded-xl p-6">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="font-bold text-lg text-white">DevOps & Delivery</h3>
-            <span class="text-xs font-mono bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded">Automation</span>
-          </div>
-          <ul class="text-sm text-gray-300 space-y-2.5">
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Hypersphere Termux CLI Core</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> GitHub Repository & Access Management</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> Standardized API Versioning (v1.0.0)</li>
-            <li class="flex items-center gap-2"><span class="text-indigo-400 font-bold">•</span> GitHub Pages Static Hosting</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Section 2: Architecture Specs Breakdown -->
-    <section id="architecture" class="space-y-6">
-      <h2 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-3">
-        Engine Specifications (v1.0.0)
-      </h2>
-
-      <div class="border border-gray-800 rounded-xl bg-gray-900/40 overflow-hidden">
-        <div class="divide-y divide-gray-800">
-          
-          <!-- Item 1 -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-indigo-400">DATA & SAVING</span>
-              <h3 class="font-bold text-white text-base">Persistent Player Data System</h3>
-              <p class="text-xs text-gray-400">Safely manages Money, Level, auto-save interval loops, and BindToClose crash saving.</p>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-gray-800 text-gray-300 px-2.5 py-1 rounded">Server-Authoritative</span>
-              <span class="text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded">Production Ready</span>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-indigo-400">ECONOMY & COMMERCE</span>
-              <h3 class="font-bold text-white text-base">Dynamic Shop & Transaction Engine</h3>
-              <p class="text-xs text-gray-400">Metatable-driven merchant instances with dynamic pricing markup formulas and fund validation.</p>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-gray-800 text-gray-300 px-2.5 py-1 rounded">OOP Architecture</span>
-              <span class="text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded">Production Ready</span>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-indigo-400">COMBAT & MATH</span>
-              <h3 class="font-bold text-white text-base">Combat & Posture Guard Engine</h3>
-              <p class="text-xs text-gray-400">Spatial range checks, stamina whiff penalties, guard mitigation, posture breaks, and turn recovery.</p>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-gray-800 text-gray-300 px-2.5 py-1 rounded">State Machine</span>
-              <span class="text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded">Production Ready</span>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-indigo-400">UI & INTERACTION</span>
-              <h3 class="font-bold text-white text-base">Dynamic Interactable GUI Framework</h3>
-              <p class="text-xs text-gray-400">Programmatic UI generation with automatically cleaned lists, hover animations, and UICorner styling.</p>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-gray-800 text-gray-300 px-2.5 py-1 rounded">Client Driven</span>
-              <span class="text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded">Production Ready</span>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <span class="text-xs font-mono text-indigo-400">SPATIAL MATH</span>
-              <h3 class="font-bold text-white text-base">Type-Safe Placement Grid Engine</h3>
-              <p class="text-xs text-gray-400">Strict Luau type checking, Vector3 grid snapping, and plot boundary validation.</p>
-            </div>
-            <div class="flex gap-2">
-              <span class="text-xs font-mono bg-gray-800 text-gray-300 px-2.5 py-1 rounded">Strict Typed</span>
-              <span class="text-xs font-mono bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded">Production Ready</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Delivery Pipeline -->
-    <section id="pipeline" class="space-y-6">
-      <h2 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-3">
-        Automated Client Delivery Pipeline
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-lg text-center">
-          <div class="text-indigo-400 font-mono font-bold text-xl mb-1">01</div>
-          <h4 class="font-bold text-white text-sm mb-1">Order Placed</h4>
-          <p class="text-xs text-gray-400">Client requests specific Luau system licenses.</p>
-        </div>
-
-        <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-lg text-center">
-          <div class="text-indigo-400 font-mono font-bold text-xl mb-1">02</div>
-          <h4 class="font-bold text-white text-sm mb-1">Hypersphere Exec</h4>
-          <p class="text-xs text-gray-400">Grant command executed via Termux automation engine.</p>
-        </div>
-
-        <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-lg text-center">
-          <div class="text-indigo-400 font-mono font-bold text-xl mb-1">03</div>
-          <h4 class="font-bold text-white text-sm mb-1">Repo Access</h4>
-          <p class="text-xs text-gray-400">Client gets automated GitHub repo collaborator access.</p>
-        </div>
-
-        <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-lg text-center">
-          <div class="text-indigo-400 font-mono font-bold text-xl mb-1">04</div>
-          <h4 class="font-bold text-white text-sm mb-1">Instant Setup</h4>
-          <p class="text-xs text-gray-400">Client follows the step-by-step installation guide issue.</p>
+        <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-5">
+          <h3 class="font-bold text-white text-base mb-2">Fail-Safe Persistence</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Data systems incorporate asynchronous pcall protection, automated background interval loops, and server shutdown save hooks to eliminate data loss.
+          </p>
         </div>
       </div>
     </section>
@@ -202,7 +203,7 @@
 
   <!-- Footer -->
   <footer class="border-t border-gray-800/80 bg-gray-950 py-8 text-center text-xs text-gray-500">
-    © 2026 Krymil Architecture. Powered by Luau & Hypersphere Termux Engine.
+    © Krymil Luau Architecture. Built for high-performance Roblox studios.
   </footer>
 
 </body>
